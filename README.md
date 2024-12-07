@@ -7,28 +7,62 @@
 AI Yoga Assistant
 </h1>    
 
-## Yoga
+This project aims to enhance the yoga experience by utilizing AI to detect and correct yoga poses. The model is trained to recognize various yoga poses and provide real-time feedback on alignment and accuracy, enabling users to improve their practice, reduce injury risk, and ensure correct posture.
 
-<b>Yoga </b> is a great form of exercise and has benefits like improving flexibility and strength, reducing stress and anxiety. Research has also found that yoga can help improve metabolism, heart rate and respiration. Good posture should keep your body aligned. But due to lack of knowledge about correct posture of yoga people suffer from acute pain and long-standing chronic problems, say doctors. 
-So we built an app which can assist and guide a user properly and correctly while he/she is performing a particular Yoga Asana through an AI assistant. 
-It guides the user to perform an Asana correctly in the right posture through an AI voice assistant and shows the accurate data of a user for the Asana he/she will be doing in the form of graphs and charts.
+## Objective
+The goal of this proof of concept (PoC) is to:
 
-## Features
+Identify common yoga poses through computer vision.
 
-🧘It will guide the user to perform an Asana correctly in the right posture through an AI voice assistant through webcam live. <br>
-🧘 A counter will also be provided to check for how long a user can hold a specific pose.<br>
-🧘 On the basis of the counter time the user will be rewarded with daily coins.<br>
-🧘 Keep a track of time a user invests to the app  and will provide proper representable charts for the same.<br>
-🧘Shows the accuracy data of a user for the Asana he/she will be doing in the form of graphs and charts.<br>
-🧘It will have an fascinating interface which will inspire people to be consistent with this activity.<br>
-🧘For the future scope, user will be able to invite his/her friends for some cool yoga battles. <br>
+Provide feedback on pose alignment and accuracy.
+
+Suggest adjustments to enhance the user’s practice.
+
+## Use Case
+
+### Pose Detection & Correction:
+
+The application helps users perform yoga poses with accurate alignment by detecting the pose and offering feedback on their posture. The model highlights the misalignment areas and suggests corrective actions. This feature aims to guide yoga practitioners in achieving proper form and prevent common injuries caused by improper posture.
+
+## Dataset
+
+### Data Source: The dataset used for this project is a combination of publicly available datasets such as Yoga-82 Dataset (or any other relevant datasets).
+### Dataset Characteristics:
+82 different yoga poses.
+
+Images annotated with key landmarks to identify key body points in each pose.
+
+Multiple angles for each pose.
 
 
-## Uses
+## Model Development
 
-🌟Can be used by people who live alone and don’t want to compromise their health <br>
-🌟Increase consistency because of the rewarding nature of the app <br>
-🌟It could be used to build some Yoga learning zones<br>
+### Preprocessing
+The images are resized to a fixed size (e.g., 224x224 pixels).
+
+Keypoint extraction is performed using a pose estimation model (e.g., OpenPose, MediaPipe).
+
+Data augmentation is applied to improve model robustness and generalization.
+
+## Model Architecture
+
+The model architecture is based on a Convolutional Neural Network (CNN) for pose classification:
+
+
+Input Layer: Takes an image or video frame as input.
+
+Pose Estimation: Uses pose estimation libraries (e.g., OpenPose, MediaPipe) to detect key landmarks (e.g., elbows, knees, hips, etc.).
+
+Classification Layer: A CNN layer classifies the detected pose into one of the predefined yoga poses.
+
+Alignment Feedback: A custom-built feedback module compares detected keypoints to the ideal pose and calculates the alignment score.
+
+## Feedback Mechanism
+The model generates feedback based on the pose's keypoint alignment.
+
+A visual overlay shows how far each joint is from the ideal alignment (e.g., angle between joints).
+
+Suggestions for improving posture are displayed, such as "Keep your shoulders back" or "Straighten your back."
 
 # Website
 
