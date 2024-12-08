@@ -86,9 +86,6 @@ The model generates feedback based on the pose's keypoint alignment.
 
 ![charts](https://user-images.githubusercontent.com/90816300/174463655-e37138f1-1651-4898-85ec-216864a502b9.png)
 
-# For More Watch The Demo Video
-
-https://www.youtube.com/watch?v=6XjsSECpfI4&ab_channel=JaideepSolania
 
 # Tech Stack Used
 
