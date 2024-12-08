@@ -12,11 +12,11 @@ This project aims to enhance the yoga experience by utilizing AI to detect and c
 ## Objective
 The goal of this proof of concept (PoC) is to:
 
-Identify common yoga poses through computer vision.
+- Identify common yoga poses through computer vision.
 
-Provide feedback on pose alignment and accuracy.
+- Provide feedback on pose alignment and accuracy.
 
-Suggest adjustments to enhance the user’s practice.
+- Suggest adjustments to enhance the user’s practice.
 
 ## Use Case
 
@@ -28,41 +28,41 @@ The application helps users perform yoga poses with accurate alignment by detect
 
 ### Data Source: The dataset used for this project is a combination of publicly available datasets such as Yoga-82 Dataset (or any other relevant datasets).
 ### Dataset Characteristics:
-82 different yoga poses.
+- 82 different yoga poses.
 
-Images annotated with key landmarks to identify key body points in each pose.
+- Images annotated with key landmarks to identify key body points in each pose.
 
-Multiple angles for each pose.
+- Multiple angles for each pose.
 
 
 ## Model Development
 
 ### Preprocessing
-The images are resized to a fixed size (e.g., 224x224 pixels).
+- The images are resized to a fixed size (e.g., 224x224 pixels).
 
-Keypoint extraction is performed using a pose estimation model (e.g., OpenPose, MediaPipe).
+- Keypoint extraction is performed using a pose estimation model (e.g., OpenPose, MediaPipe).
 
-Data augmentation is applied to improve model robustness and generalization.
+- Data augmentation is applied to improve model robustness and generalization.
 
 ## Model Architecture
 
 The model architecture is based on a Convolutional Neural Network (CNN) for pose classification:
 
 
-Input Layer: Takes an image or video frame as input.
+- Input Layer: Takes an image or video frame as input.
 
-Pose Estimation: Uses pose estimation libraries (e.g., OpenPose, MediaPipe) to detect key landmarks (e.g., elbows, knees, hips, etc.).
+- Pose Estimation: Uses pose estimation libraries (e.g., OpenPose, MediaPipe) to detect key landmarks (e.g., elbows, knees, hips, etc.).
 
-Classification Layer: A CNN layer classifies the detected pose into one of the predefined yoga poses.
+- Classification Layer: A CNN layer classifies the detected pose into one of the predefined yoga poses.
 
-Alignment Feedback: A custom-built feedback module compares detected keypoints to the ideal pose and calculates the alignment score.
+- Alignment Feedback: A custom-built feedback module compares detected keypoints to the ideal pose and calculates the alignment score.
 
 ## Feedback Mechanism
 The model generates feedback based on the pose's keypoint alignment.
 
-A visual overlay shows how far each joint is from the ideal alignment (e.g., angle between joints).
+- A visual overlay shows how far each joint is from the ideal alignment (e.g., angle between joints).
 
-Suggestions for improving posture are displayed, such as "Keep your shoulders back" or "Straighten your back."
+- Suggestions for improving posture are displayed, such as "Keep your shoulders back" or "Straighten your back."
 
 # Website
 
